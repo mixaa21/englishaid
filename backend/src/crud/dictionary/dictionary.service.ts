@@ -19,8 +19,7 @@ export class DictionaryService {
         return await this.dictionaryRepository.find()
     }
     async save(entity): Promise<any> {
-        entity.transcription = (await API.fetchWordTranslation(entity.word)).transcription.us
-        const res = await API.fetchWordTranslation(entity.word)
+        // entity.transcription = (await API.fetchWordTranslation(entity.word)).transcription.us
         await this.dictionaryRepository.save(entity)
         return entity.transcription
     }

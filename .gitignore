@@ -124,3 +124,5 @@ sw.*
 
 # Vim swap files
 *.swp
+
+./backend/src/database/ormconfig.json
